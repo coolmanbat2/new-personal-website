@@ -1,0 +1,7 @@
+.resume {
+    display: flex;
+    justify-content: center;
+    width: 70vw;
+    height: 70vw;
+    padding: 7vw;
+}

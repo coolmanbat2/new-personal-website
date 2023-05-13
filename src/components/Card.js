@@ -5,20 +5,25 @@ import "reactjs-popup/dist/index.css";
 
 function Card(props) {
   function picButton() {
-    return <img className="card" src={props.src} alt={props.alt} />;
+    return <img className="card pic-button" src={props.src} alt={props.alt} />;
   }
 
   return (
-    <Popup trigger={picButton} position="right center" modal nested>
+    <Popup trigger={picButton} position="right center" modal nested contentStyle={{width: "80%"}}>
       <div className="card-project">
-        <div style={{ lineHeight: "0.5vw", width: "16em" }}>
-          <h2 style={{ width: "24vw" }}>{props.title}</h2>
-          <h4>{props.organization}</h4>
+        <div className="card-titles">
+          <div style={{ width: "16em" }}>
+            <h2 style={{ width: "24vw" }}>{props.title}</h2>
+            <h5>{props.organization}</h5>
+          </div>
+          <hr />
+          <div className="card-titles">
+            <h6 className="languages">{props.languages}</h6>
+          </div>
         </div>
-        <hr style={{ marginLeft: "3%" }} />
-        <h4 style={{ textAlign: "left", width: "66%" }}>{props.languages}</h4>
+
+        <ul>{props.children}</ul>
       </div>
-      <ul>{props.children}</ul>
     </Popup>
   );
 }

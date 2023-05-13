@@ -1,29 +1,22 @@
 import React from "react";
+import "../css/Experience.css";
 
 function Experience(props) {
   return (
-    <div style={{ display: "flex" }}>
+    <div className="experience">
       <div>
         <img
-          style={{ height: "21vw" }}
+          className="img-exp"
           src={props.imagePath}
           alt={props.imageName}
         ></img>
       </div>
-      <div style={{ textAlign: "left" }}>
-        <div style={{ paddingLeft: "7.3vw", fontWeight: "600" }}>
-          <div style={{ fontSize: "2.2vw" }}>{props.job}</div>
-          <div style={{ fontSize: "1.5vw" }}>{props.dates}</div>
+      <div className="subtitles" style={props.style}>
+        <div className="weight">
+          <div className="job-title">{props.job}</div>
+          <div className="date-title">{props.dates}</div>
         </div>
-        <ul
-          style={{
-            paddingRight: "9vw",
-            paddingLeft: "4.2vw",
-            fontSize: "1.4vw",
-          }}
-        >
-          {props.children}
-        </ul>
+        <div className="info">{props.children}</div>
       </div>
     </div>
   );

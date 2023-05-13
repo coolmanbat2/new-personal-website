@@ -2,14 +2,34 @@
   object-fit: contain;
   width: 28vw;
   height: 28vw;
+  border: none;
+  background-color: #f8f9fa;
+  opacity: 0.7;
+}
+
+.pic-button {
+  transition: 0.5s;
+}
+
+.pic-button:hover {
+  opacity: 1;
 }
 
 .card-project {
-  display:flex;
+  /* display: flex; */
   border-radius: 3%;
+  padding: 0vw 8vw;
 }
 
+.languages {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
 
+.card-titles {
+  display: flex;
+}
 
 /* animation */
 

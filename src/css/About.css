@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 2vw 0px 0px;
+
+  animation: fadeInRight 1s ease-in-out;
+
 }
 .about-header {
   display: flex;
@@ -27,6 +30,15 @@
   line-height: 2.2vw;
   padding-right: 22vw;
   text-align: left;
+}
+
+@media (max-width: 600px) {
+  .text {
+    font-size: 7px;
+    line-height: 10px;
+    padding-right: 29px;
+
+  }
 }
 
 .profile-img {

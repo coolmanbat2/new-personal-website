@@ -1,7 +1,7 @@
 import "../css/Main.css";
 import React from "react";
 
-function Main() {
+function Main(props) {
   return (
     <div className="bg-img" id="main">
       <div className="main">

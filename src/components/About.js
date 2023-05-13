@@ -19,7 +19,6 @@ function About(params) {
           </p>
         </div>
         <img src={profilePic} alt="profile" className="profile-img"></img>
-        {/* <div className="profile-img"/> */}
       </div>
     </div>
   );

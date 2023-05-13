@@ -1,20 +1,5 @@
 .menubar {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 42vw;
-  padding-top: 0.5vw;
-  width: 68vw;
-
-  font-size: 1.2vw;
-  font-weight: 200;
-}
-
-@media (max-width: 300px) {
- .menubar {
-  
- } 
+  width: 100%;
 }
 
 .logo {

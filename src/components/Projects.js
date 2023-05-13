@@ -1,6 +1,6 @@
 import "../css/Projects.css";
 
-import houseparty from "../static/houseparty.png";
+import houseparty from "../static/houseparty.jpg";
 import netcon from "../static/netcon.jpg";
 import orderup from "../static/orderup.jpg";
 import Card from "./Card";
@@ -8,10 +8,10 @@ import React from "react";
 
 function Projects(params) {
   return (
-    <div className="projects" id="projects">
+    <div id="projects">
       <div className="header">Projects</div>
       <hr className="line-break" />
-      <div>
+      <div className="projects">
         <Card
           src={houseparty}
           title="Group Music Controller"

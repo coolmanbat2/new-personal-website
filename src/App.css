@@ -8,13 +8,15 @@
   padding: 1vw 8vw 8vw;
   gap: 2vw;
 
-  display:flex;
-
+  display: flex;
+  background-color: #f8f9fa;
 }
 
 .line-break {
   width: 11vw;
   margin-left: 1vw;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
 }
 
 .header {
@@ -23,6 +25,12 @@
   font-size: 3.2vw;
   line-height: 4vw;
   display: flex;
+}
+
+@media (max-width: 600px) {
+  .header {
+    font-size: 18px;
+  }
 }
 
 a {

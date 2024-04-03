@@ -1,29 +1,45 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
-  padding: 12.5vw;
-  text-align: left;
-  padding-left: 22vw;
-  gap: 2px;
+}
+
+.font-design { 
+  font-style: normal;
+  line-height: 4.5vw;
+  font-weight: 450;
+}
+
+.main-color {
+  color: #D9D5D2;
+}
+
+.secondary-color {
+  color: #8C5D58;
+}
+
+.tertiary-color {
+  color: #BFBCBA;
 }
 
 .bg-img {
   height: 36vw;
   width: 100vw;
-  background-image: url("../static/toronto.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
-.main-text {
-  font-style: normal;
-  font-weight: 550;
+.big-text {
   font-size: 4vw;
-  line-height: 5vw;
-  color: white;
+}
+
+.med-text {
+  font-size: 3vw;
+}
+
+.sub-small-text { 
+  font-size: 2vw;
 }
 
 @media (max-width: 600px) {

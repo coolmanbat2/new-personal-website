@@ -1,22 +1,20 @@
 import React from "react";
+import Skill from "./Skill";
 import "../css/Experience.css";
+import "../css/Main.css";
 
 function Experience(props) {
   return (
     <div className="experience">
-      <div>
-        <img
-          className="img-exp"
-          src={props.imagePath}
-          alt={props.imageName}
-        ></img>
-      </div>
       <div className="subtitles" style={props.style}>
-        <div className="weight">
+        <div className="main-color weight">
           <div className="job-title">{props.job}</div>
           <div className="date-title">{props.dates}</div>
         </div>
-        <div className="info">{props.children}</div>
+        <div className="tertiary-color info">{props.children}</div>
+        <div className="top-skills">
+          <Skill>Hej </Skill>
+        </div>
       </div>
     </div>
   );

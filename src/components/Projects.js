@@ -1,4 +1,5 @@
 import "../css/Projects.css";
+import "../css/Main.css";
 
 import houseparty from "../static/houseparty.jpg";
 import netcon from "../static/netcon.jpg";
@@ -9,7 +10,7 @@ import React from "react";
 function Projects(params) {
   return (
     <div id="projects">
-      <div className="header">Projects</div>
+      <div className="main-color header">Projects</div>
       <hr className="line-break" />
       <div className="projects">
         <Card

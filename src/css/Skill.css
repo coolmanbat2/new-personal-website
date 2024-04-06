@@ -1,6 +1,19 @@
 .pill {
-  width: auto;
-  height: 1.85vw;
-  border-radius: 0.9375rem;
+  width: max-content;
+  height: 2.5rem;
   background: #bfbcba;
+}
+
+.round {
+  border-radius: 2rem;
+}
+
+.small-text {
+  font-size: 1.6rem;
+}
+
+.center {
+  display: inline-flex;
+  padding: 1.5rem;
+  align-items: center;
 }

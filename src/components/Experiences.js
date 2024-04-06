@@ -1,19 +1,33 @@
 import "../css/Experiences.css";
 import "../css/Main.css";
-import Experience from "../components/Experience.js";
 
-import hackthevalley from "../static/htv.jpg";
+import InformationCard from "./InformationCard.js";
+
+import Skill from "./Skill.js";
+
 import React from "react";
 
 function Experiences(params) {
+  function allSkills() {
+    return (
+      <>
+        <Skill>React</Skill>
+        <Skill>JavaScript</Skill>
+        <Skill>HTML</Skill>
+        <Skill>CSS</Skill>
+      </>
+    )
+  }
+  
   return (
     <div id="experience">
       <div className="main-color header">Experience</div>
       <div className="experiences">
-        <Experience
-          job="Front-end Developer - Hack The Valley"
+        <InformationCard
+          title="Front-end Developer - Hack The Valley"
           dates="September 2020 - February 2021"
-          style={{paddingLeft: "9vw"}}
+          style={{ paddingLeft: "9vw" }}
+          skills={allSkills()}
         >
           <div>
             Reduced query Times by 50% by refactoring the database and
@@ -32,7 +46,7 @@ function Experiences(params) {
             Created a fast and user-friendly Application and Login page for over
             1000 applicants using HTML, CSS, and JavaScript.
           </div>
-        </Experience>
+        </InformationCard>
       </div>
     </div>
   );

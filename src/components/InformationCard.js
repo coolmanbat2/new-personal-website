@@ -1,23 +1,20 @@
 import React from "react";
-import Skill from "./Skill";
-import "../css/Experience.css";
+import "../css/InformationCard.css";
 import "../css/Main.css";
 
-function Experience(props) {
+function InformationCard(props) {
   return (
-    <div className="experience">
       <div className="subtitles" style={props.style}>
         <div className="main-color weight">
-          <div className="job-title">{props.job}</div>
+          <div className="info-title">{props.title}</div>
           <div className="date-title">{props.dates}</div>
         </div>
         <div className="tertiary-color info">{props.children}</div>
-        <div className="top-skills">
-          <Skill>Hej </Skill>
+        <div className="flex top-skills">
+          {props.skills}
         </div>
       </div>
-    </div>
   );
 }
 
-export default Experience;
+export default InformationCard;

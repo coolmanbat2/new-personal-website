@@ -1,5 +1,9 @@
-.experience {
+.flex {
     display: flex;
+}
+
+.top-skills {
+    gap: 1rem;
 }
 
 .img-exp {
@@ -16,7 +20,7 @@
     font-weight: 600;
 }
 
-.job-title {
+.info-title {
     font-size: 2.2vw;
 }
 

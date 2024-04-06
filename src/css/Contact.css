@@ -1,19 +1,12 @@
-.contact-adj {
-    justify-content: center;
-    padding-bottom: 2vw;
-    outline: none;
-}
-
 .icons {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 15vw;
+    gap: 9rem;
 }
 
 .icon {
-    color: black;
     font-size: 2vw;
 }
 

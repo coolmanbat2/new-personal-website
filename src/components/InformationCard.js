@@ -10,6 +10,7 @@ function InformationCard(props) {
           <div className="date-title">{props.dates}</div>
         </div>
         <div className="tertiary-color info">{props.children}</div>
+        <a className="link-desc" href={props.link}>{props.githubName}</a>
         <div className="flex top-skills">
           {props.skills}
         </div>

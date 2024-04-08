@@ -26,7 +26,6 @@ function Experiences(params) {
         <InformationCard
           title="Front-end Developer - Hack The Valley"
           dates="September 2020 - February 2021"
-          style={{ paddingLeft: "9vw" }}
           skills={allSkills()}
         >
           <div>

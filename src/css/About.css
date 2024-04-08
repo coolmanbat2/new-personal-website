@@ -1,15 +1,16 @@
-
 .about-section {
   display: flex;
   flex-direction: column;
   padding: 0px;
   gap: 1vw;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .text {
   font-style: normal;
-  font-weight: 500;
-  font-size: 1.3vw;
+  font-weight: 400;
+  font-size: 0.8125rem;
   line-height: 2.2vw;
   padding-right: 22vw;
   text-align: left;
@@ -20,7 +21,6 @@
     font-size: 7px;
     line-height: 10px;
     padding-right: 29px;
-
   }
 }
 

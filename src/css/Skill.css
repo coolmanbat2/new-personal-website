@@ -1,6 +1,6 @@
 .pill {
   width: max-content;
-  height: 2.5rem;
+  height: 1.25rem;
   background: #bfbcba;
 }
 
@@ -9,11 +9,13 @@
 }
 
 .small-text {
-  font-size: 1.6rem;
+  color: #262626;
+  font-size: 0.625rem;
 }
 
 .center {
   display: inline-flex;
-  padding: 1.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
   align-items: center;
 }

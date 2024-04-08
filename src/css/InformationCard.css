@@ -1,48 +1,65 @@
 .flex {
-    display: flex;
+  display: flex;
+}
+
+.col-direction {
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.2rem;
+}
+
+.image {
+  width: 3.5rem;
+  height: 3.31rem;
+  object-fit: cover;
+  border-radius: 0.3125rem;
 }
 
 .top-skills {
-    gap: 1rem;
+  gap: 0.5rem;
 }
 
 .img-exp {
-    height: 21vw;
+  height: 21vw;
 }
 
-.subtitles {
-    padding-left: 7.2vw;
-    text-align: left;
-    padding-bottom: 1.2vw;
+.link-desc {
+  font-size: x-small;
+}
+
+.info-card {
+  align-items: center;
+  text-align: left;
+  padding-bottom: 1.2vw;
+  gap: 1.56rem;
 }
 
 .weight {
-    font-weight: 600;
+  font-weight: 400;
 }
 
 .info-title {
-    font-size: 2.2vw;
+  font-size: 0.8125rem;
 }
 
 .date-title {
-    font-size: 1.5vw;
+  font-size: 0.5625rem;
 }
 
 .info {
-    padding-right: 9vw;
-    font-size: 1.4vw;
+  font-size: 0.625rem;
 }
 
 @media (max-width: 600px) {
-    .job-title {
-        font-size: 9px;
-    }
+  .job-title {
+    font-size: 9px;
+  }
 
-    .date-title {
-        font-size: 6px;
-    }
+  .date-title {
+    font-size: 6px;
+  }
 
-    .info {
-        font-size: 5px;
-    }
+  .info {
+    font-size: 5px;
+  }
 }

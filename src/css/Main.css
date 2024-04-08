@@ -6,7 +6,6 @@
 
 .font-design { 
   font-style: normal;
-  line-height: 3.5vw;
   font-weight: 450;
 }
 
@@ -22,24 +21,32 @@
   color: #BFBCBA;
 }
 
+a:hover {
+  color: #D9D5D2;
+  
+}
+
 .bg-img {
-  height: 36vw;
-  width: 100vw;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .big-main-text {
-  font-size: 3vw;
+  font-size: 1.4375rem;
+  font-weight: 800;
 }
 
 .med-main-text {
-  font-size: 2vw;
+  font-size: 1.125rem;
+  font-weight: 500;
 }
 
 .sub-small-main-text { 
-  font-size: 1.5vw;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 @media (max-width: 600px) {

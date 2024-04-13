@@ -10,9 +10,6 @@ function Main(props) {
         <div className="main-color med-main-text">I build Full Stack Applications with <span className="secondary-color">React</span>, <span className="secondary-color">Django</span>, and <span className="secondary-color">SQLite</span></div>
         <div className="sub-small-main-text tertiary-color">I like to travel and eat at new restaurants</div>
       </div>
-      <div className="main-projects">
-        <Projects/>
-      </div>
     </div>
   );
 }

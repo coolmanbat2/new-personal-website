@@ -5,8 +5,9 @@ body {
 .App {
   display: grid;
   font-family: "Montserrat", sans-serif;
-  padding: 8vw;
+  padding: 5rem 21rem 5rem 21rem;
   column-gap: 8vw;
+  row-gap: 5vw;
 }
 
 .header {

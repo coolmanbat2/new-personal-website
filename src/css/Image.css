@@ -1,0 +1,8 @@
+.profile-img {
+    /* background: url("../static/profile.png"); */
+    /* background-repeat: no-repeat; */
+    object-fit:cover;
+    width: 22rem;
+    height: 16rem;
+    border-radius: 15px;
+}

@@ -1,13 +1,11 @@
 import "../css/About.css";
 import "../css/Main.css";
 
-import profilePic from "../static/profile.png";
 import React from "react";
 
-function About(params) {
+function About() {
   return (
     <div className="about-section" id="about">
-      <img src={profilePic} alt="profile" className="profile-img"></img>
       <div className="main-color header">A little bit about me</div>
       <div className="tertiary-color">
         <p>

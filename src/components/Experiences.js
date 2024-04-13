@@ -1,5 +1,6 @@
 import "../css/Experiences.css";
 import "../css/Main.css";
+import hackthevalley from "../static/htv.jpg";
 
 import InformationCard from "./InformationCard.js";
 
@@ -18,7 +19,7 @@ function Experiences(params) {
       </>
     )
   }
-  
+
   return (
     <div id="experience">
       <div className="main-color header">Experience</div>
@@ -26,6 +27,7 @@ function Experiences(params) {
         <InformationCard
           title="Front-end Developer - Hack The Valley"
           dates="September 2020 - February 2021"
+          src={hackthevalley}
           skills={allSkills()}
         >
           <div>

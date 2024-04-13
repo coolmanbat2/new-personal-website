@@ -1,31 +1,12 @@
+body {
+  background-color: #262626;
+}
+
 .App {
   display: grid;
   font-family: "Montserrat", sans-serif;
-
-  padding: 1vw 8vw 8vw;
-  gap: 2vw;
-
-  background-color: #262626;
-}
-/* Placement of each component via grid. */
-.main {
-  
-}
-
-.about {
-  
-}
-
-.projects {
-
-}
-
-.experience {
-
-}
-
-.contact {
-
+  padding: 8vw;
+  column-gap: 8vw;
 }
 
 .header {

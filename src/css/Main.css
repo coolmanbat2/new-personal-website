@@ -26,12 +26,9 @@ a:hover {
   
 }
 
-.bg-img {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  grid-row-start: 1;
-  grid-row-end: 2;
+
+.main-projects {
+  padding-top: 6rem;
 }
 
 .big-main-text {

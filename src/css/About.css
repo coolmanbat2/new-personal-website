@@ -25,8 +25,6 @@
 }
 
 .profile-img {
-  width: 18vw;
-  height: 5vh;
   background: url("../static/profile.png");
   object-fit: cover;
   border-radius: 15px;

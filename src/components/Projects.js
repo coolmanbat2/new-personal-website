@@ -1,7 +1,6 @@
 import "../css/Projects.css";
 import "../css/Main.css";
 
-import houseparty from "../static/houseparty.jpg";
 import netcon from "../static/netcon.jpg";
 import orderup from "../static/orderup.jpg";
 import Skill from "./Skill";

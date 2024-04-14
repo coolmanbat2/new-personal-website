@@ -1,8 +1,6 @@
 import "../css/Projects.css";
 import "../css/Main.css";
 
-import netcon from "../static/netcon.jpg";
-import orderup from "../static/orderup.jpg";
 import Skill from "./Skill";
 import React from "react";
 import InformationCard from "./InformationCard";

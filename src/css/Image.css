@@ -1,8 +1,7 @@
 .profile-img {
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
+  object-fit: contain;
   width: 100%;
+  max-width: 100%;
 }
 
 .profile-background {

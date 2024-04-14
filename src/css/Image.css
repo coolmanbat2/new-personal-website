@@ -1,8 +1,14 @@
 .profile-img {
-    /* background: url("../static/profile.png"); */
-    /* background-repeat: no-repeat; */
-    object-fit:cover;
-    width: 22rem;
-    height: 16rem;
+  /* background: url("../static/profile.png"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.profile-background {
+    background-color: #dad7d2;
+    width: 100%;
     border-radius: 15px;
 }

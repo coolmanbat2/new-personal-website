@@ -24,7 +24,7 @@
 }
 
 .link-desc {
-  font-size: x-small;
+  font-size: medium;
 }
 
 .info-card {
@@ -39,15 +39,15 @@
 }
 
 .info-title {
-  font-size: 0.8125rem;
+  font-size: 1.25rem;
 }
 
 .date-title {
-  font-size: 0.5625rem;
+  font-size: 1rem;
 }
 
 .info {
-  font-size: 0.625rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 600px) {

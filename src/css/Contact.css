@@ -3,8 +3,13 @@
     gap: 9rem;
 }
 
+.contact {
+    margin: 0 auto;
+    width: 50%;
+}
+
 .icon {
-    font-size: 2vw;
+    font-size: 2rem;
 }
 
 @media (max-width: 600px) {

@@ -13,9 +13,7 @@ function App() {
       <Main />
       <Image/>
       <Projects/>
-      <About />
       <Experience />
-      <Contact />
     </div>
   );
 }

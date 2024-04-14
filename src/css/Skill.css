@@ -1,6 +1,6 @@
 .pill {
   width: max-content;
-  height: 1.25rem;
+  height: 2.25rem;
   background: #bfbcba;
 }
 
@@ -10,7 +10,7 @@
 
 .small-text {
   color: #262626;
-  font-size: 0.625rem;
+  font-size: 1rem;
 }
 
 .center {

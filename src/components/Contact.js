@@ -5,7 +5,7 @@ import "../css/Main.css"
 
 function Contact(params) {
   return (
-    <div id="contact">
+    <div className="contact">
       <div className="icons">
         <a href="https://www.linkedin.com/in/thanusun/">
           <i className="bi bi-linkedin icon main-color"/>

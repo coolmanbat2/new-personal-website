@@ -5,6 +5,7 @@ import hackthevalley from "../static/htv.jpg";
 import InformationCard from "./InformationCard.js";
 
 import Skill from "./Skill.js";
+import Contact from "./Contact.js";
 
 import React from "react";
 
@@ -49,6 +50,7 @@ function Experiences(params) {
           </div>
         </InformationCard>
       </div>
+      <Contact/>
     </div>
   );
 }

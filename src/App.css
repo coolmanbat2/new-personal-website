@@ -5,7 +5,7 @@ body {
 .App {
   display: grid;
   font-family: "Montserrat", sans-serif;
-  padding: 79px 330px 79px 330px;
+  padding: 5% 13%;
   column-gap: 8vw;
   row-gap: 5vw;
 }
@@ -13,7 +13,7 @@ body {
 .header {
   font-style: normal;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.5rem;
   display: flex;
 }
 

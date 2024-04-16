@@ -49,17 +49,3 @@
 .info {
   font-size: 1rem;
 }
-
-@media (max-width: 600px) {
-  .job-title {
-    font-size: 9px;
-  }
-
-  .date-title {
-    font-size: 6px;
-  }
-
-  .info {
-    font-size: 5px;
-  }
-}

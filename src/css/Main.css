@@ -51,12 +51,4 @@ a:hover {
   font-weight: 400;
 }
 
-@media (max-width: 600px) {
-  .main-text {
-    font-size: 4vw;
-  }
 
-  .main {
-    padding-left: 24%;
-  }
-}

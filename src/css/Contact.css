@@ -1,6 +1,6 @@
 .icons {
     display: inline-flex;
-    gap: 9rem;
+    gap: 5rem;
 }
 
 .contact {
@@ -10,14 +10,4 @@
 
 .icon {
     font-size: 2rem;
-}
-
-@media (max-width: 600px) {
-    .icon {
-        font-size: 10px;
-    }
-
-    .icons {
-        gap: 10px;
-    }
 }

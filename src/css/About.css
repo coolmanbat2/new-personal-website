@@ -12,12 +12,3 @@
   padding-right: 22vw;
   text-align: left;
 }
-
-@media (max-width: 600px) {
-  .text {
-    font-size: 7px;
-    line-height: 10px;
-    padding-right: 29px;
-  }
-}
-

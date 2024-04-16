@@ -1,6 +1,10 @@
 import "../css/Projects.css";
 import "../css/Main.css";
 
+
+import houseparty from "../static/houseparty.jpg";
+import urlshort from "../static/URLShortenerImage.png";
+import videogame from "../static/videoGameAPI.png";
 import Skill from "./Skill";
 import React from "react";
 import InformationCard from "./InformationCard";
@@ -44,6 +48,7 @@ function Projects(params) {
         <InformationCard
           title="Group Music Controller"
           skills={skillsOne()}
+          src={houseparty}
           linkViewText={viewText}
           link="https://github.com/coolmanbat2/Group-Music/tree/main"
         >
@@ -53,6 +58,7 @@ function Projects(params) {
         <InformationCard
           title="URL Shortener"
           skills={skillsTwo()}
+          src={urlshort}
           linkViewText={viewText}
           link="https://github.com/coolmanbat2/url-shortener"
         >
@@ -62,6 +68,7 @@ function Projects(params) {
         <InformationCard
           title="Video Game Discovery API"
           skills={skillsThree()}
+          src={videogame}
           linkViewText={viewText}
           link="https://github.com/coolmanbat2/Video-Game-Discovery-API"
         >

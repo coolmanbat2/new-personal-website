@@ -7,7 +7,7 @@ function Contact(params) {
   return (
     <div className="contact">
       <div className="icons">
-        <a href="https://www.linkedin.com/in/thanusun/">
+        <a href="https://www.linkedin.com/in/thanusun-thayaparan/">
           <i className="bi bi-linkedin icon main-color"/>
         </a>
         <a href="https://github.com/coolmanbat2">

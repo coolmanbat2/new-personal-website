@@ -1,37 +1,54 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
-  padding: 12.5vw;
-  text-align: left;
-  padding-left: 22vw;
-  gap: 2px;
+  padding-bottom: 2rem;
 }
 
-.bg-img {
-  height: 36vw;
-  width: 100vw;
-  background-image: url("../static/toronto.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
-.main-text {
+.font-design { 
   font-style: normal;
-  font-weight: 550;
-  font-size: 4vw;
-  line-height: 5vw;
-  color: white;
+  font-weight: 450;
 }
 
-@media (max-width: 600px) {
-  .main-text {
-    font-size: 4vw;
-  }
-
-  .main {
-    padding-left: 24%;
-  }
+.main-color {
+  color: #D9D5D2;
 }
+
+.secondary-color {
+  color: #8C5D58;
+}
+
+.heavy-weight {
+  font-weight: 800;
+}
+
+.tertiary-color {
+  color: #BFBCBA;
+}
+
+a:hover {
+  color: #D9D5D2;
+  
+}
+
+
+.main-projects {
+  padding-top: 6rem;
+}
+
+.big-main-text {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.med-main-text {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.sub-small-main-text { 
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+

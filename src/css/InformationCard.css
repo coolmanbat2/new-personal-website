@@ -1,0 +1,51 @@
+.flex {
+  display: flex;
+}
+
+.col-direction {
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.2rem;
+}
+
+.image {
+  width: 3.5rem;
+  height: 3.31rem;
+  object-fit: cover;
+  border-radius: 0.3125rem;
+}
+
+.top-skills {
+  gap: 0.5rem;
+}
+
+.img-exp {
+  height: 21vw;
+}
+
+.link-desc {
+  font-size: medium;
+}
+
+.info-card {
+  align-items: center;
+  text-align: left;
+  padding-bottom: 1.2vw;
+  gap: 1.56rem;
+}
+
+.weight {
+  font-weight: 400;
+}
+
+.info-title {
+  font-size: 1.25rem;
+}
+
+.date-title {
+  font-size: 1rem;
+}
+
+.info {
+  font-size: 1rem;
+}

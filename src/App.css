@@ -1,38 +1,18 @@
-.App {
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1vw 8vw 8vw;
-  gap: 2vw;
-
-  display: flex;
-  background-color: #f8f9fa;
+body {
+  background-color: #262626;
 }
 
-.line-break {
-  width: 11vw;
-  margin-left: 1vw;
-  margin-top: 0rem;
-  margin-bottom: 1rem;
+.App {
+  display: grid;
+  font-family: "Montserrat", sans-serif;
+  padding: 5% 13%;
+  column-gap: 8vw;
+  row-gap: 5vw;
 }
 
 .header {
   font-style: normal;
-  font-weight: 600;
-  font-size: 3.2vw;
-  line-height: 4vw;
+  font-weight: 500;
+  font-size: 1.5rem;
   display: flex;
-}
-
-@media (max-width: 600px) {
-  .header {
-    font-size: 18px;
-  }
-}
-
-a {
-  text-decoration-line: none;
 }

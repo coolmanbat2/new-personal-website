@@ -1,3 +1,9 @@
 .projects {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header {
+  padding-bottom: 0.6rem;
 }

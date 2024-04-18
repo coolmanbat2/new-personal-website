@@ -1,9 +1,0 @@
-@keyframes btn-hover {
-    from {
-      opacity: 0;
-      transform: translateX(300px);
-    }
-    to {
-      opacity: 1;
-    }
-  }

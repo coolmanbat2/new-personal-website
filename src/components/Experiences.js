@@ -1,44 +1,35 @@
 import "../css/Experiences.css";
-import Experience from "../components/Experience.js";
-
-import preemptorAi from "../static/preemptorai.jpg";
+import "../css/Main.css";
 import hackthevalley from "../static/htv.jpg";
+
+import InformationCard from "./InformationCard.js";
+
+import Skill from "./Skill.js";
+import Contact from "./Contact.js";
+
 import React from "react";
 
 function Experiences(params) {
+  function allSkills() {
+    return (
+      <>
+        <Skill>React</Skill>
+        <Skill>JavaScript</Skill>
+        <Skill>HTML</Skill>
+        <Skill>CSS</Skill>
+      </>
+    )
+  }
+
   return (
     <div id="experience">
-      <div className="header">Experience</div>
-      <hr className="line-break" />
+      <div className="main-color header">Experience</div>
       <div className="experiences">
-        <Experience
-          imagePath={preemptorAi}
-          imageName="preemptorai"
-          job="Software Engineer - PreemptorAI"
-          dates="December 2022 - March 2023"
-        >
-          <div>
-            Reduced the development time of a drive page by 80% by creating a
-            RESTful API using Django REST Framework, making API calls using
-            Axios, and using React to create a more dynamic user interface.
-          </div>
-          <div>
-            Built a backend API that makes database queries in less than two
-            weeks by working with five software engineers.
-          </div>
-          <div>
-            Led a project to build landing page designs to improve mobile
-            conversion by 10%. Used HTML, CSS, Javascript, and Photoshop to
-            create a working landing page prototype and present to the CTO for
-            approval.
-          </div>
-        </Experience>
-        <Experience
-          imagePath={hackthevalley}
-          imageName="hackthevalley"
-          job="Front-end Developer - Hack The Valley"
+        <InformationCard
+          title="Front-end Developer - Hack The Valley"
           dates="September 2020 - February 2021"
-          style={{paddingLeft: "9vw"}}
+          src={hackthevalley}
+          skills={allSkills()}
         >
           <div>
             Reduced query Times by 50% by refactoring the database and
@@ -57,8 +48,9 @@ function Experiences(params) {
             Created a fast and user-friendly Application and Login page for over
             1000 applicants using HTML, CSS, and JavaScript.
           </div>
-        </Experience>
+        </InformationCard>
       </div>
+      <Contact/>
     </div>
   );
 }

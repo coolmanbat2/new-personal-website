@@ -1,7 +1,6 @@
 import "../css/Projects.css";
 import "../css/Main.css";
 
-
 import houseparty from "../static/houseparty.jpg";
 import urlshort from "../static/URLShortenerImage.png";
 import videogame from "../static/videoGameAPI.png";
@@ -72,8 +71,8 @@ function Projects(params) {
           linkViewText={viewText}
           link="https://github.com/coolmanbat2/Video-Game-Discovery-API"
         >
-          This project is designed to help users to simplify a long link into a
-          shortened version of the link, and to be shared with others.
+          This API allows users to add, remove, and update the video games that
+          are in the database.
         </InformationCard>
       </div>
     </div>

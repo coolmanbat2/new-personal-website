@@ -9,7 +9,7 @@ import {
   loadRepos as loadReposService,
 } from "../services/projectsService";
 
-const GITHUB_USERNAME = "coolmanbat2";
+const GITHUB_USERNAME = process.env.REACT_APP_GITHUB_USERNAME;
 const viewText = "View on GitHub";
 
 function Projects() {
@@ -28,7 +28,7 @@ function Projects() {
         }
       } catch (err) {
         if (isMounted) {
-          setError("Unable load GitHub projects right now." + err.message);
+          setError("Unable load GitHub projects right now." + " " + "Error: " + err.message);
         }
       } finally {
         if (isMounted) {

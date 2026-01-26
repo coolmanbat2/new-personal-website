@@ -1,4 +1,4 @@
-const GITHUB_API_BASE = "https://api.github.com";
+const GITHUB_API_BASE = process.env.REACT_APP_GITHUB_API_BASE;
 
 export async function fetchUserRepos(username) {
   if (!username) {

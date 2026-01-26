@@ -4,6 +4,39 @@
   gap: 1rem;
 }
 
+.project-meta {
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+  color: #BFBCBA;
+}
+
+.projects-box {
+  background-color: #000;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.featured-projects-box {
+  background-color: #000;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-year-group {
+  margin-bottom: 1.5rem;
+}
+
+.project-year {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
 .header {
   padding-bottom: 0.6rem;
 }

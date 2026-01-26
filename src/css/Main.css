@@ -51,4 +51,25 @@ a:hover {
   font-weight: 400;
 }
 
+.summary {
+  margin-top: 1rem;
+  max-width: 38rem;
+  line-height: 1.5;
+}
+
+.core-skills {
+  margin-top: 1.25rem;
+}
+
+.core-skills-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.core-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 

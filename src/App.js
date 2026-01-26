@@ -1,7 +1,7 @@
 import "./App.css";
-import Main from "./components/Main";
-import Projects from "./components/Projects";
-import Experience from "./components/Experiences";
+import Main from "./pages/Main";
+import Projects from "./pages/Projects";
+import Experiences from "./pages/Experiences";
 import Image from "./components/Image";
 import React from "react";
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Main />
       <Image/>
       <Projects/>
-      <Experience />
+      <Experiences />
     </div>
   );
 }

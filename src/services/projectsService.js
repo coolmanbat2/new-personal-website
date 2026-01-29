@@ -6,6 +6,7 @@ export async function loadRepos(username) {
   return fetchUserRepos(username);
 }
 
+// This filters out forked and archived repositories and sorts them by stars.
 export function getFilteredRepos(repos) {
   if (!Array.isArray(repos)) {
     return [];
@@ -28,25 +29,4 @@ export function getFeaturedRepo(repos, date = new Date()) {
   }
 
   return repos[getWeekIndex(date) % repos.length];
-}
-
-export function groupReposByYear(repos) {
-  return repos.reduce((acc, repo) => {
-    const year = repo.updated_at
-      ? new Date(repo.updated_at).getFullYear()
-      : "Unknown";
-    if (!acc[year]) {
-      acc[year] = [];
-    }
-    acc[year].push(repo);
-    return acc;
-  }, {});
-}
-
-export function getSortedYears(groupedRepos) {
-  return Object.keys(groupedRepos).sort((a, b) => {
-    if (a === "Unknown") return 1;
-    if (b === "Unknown") return -1;
-    return Number(b) - Number(a);
-  });
 }

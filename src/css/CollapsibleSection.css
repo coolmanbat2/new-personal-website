@@ -1,0 +1,35 @@
+.collapsible-section {
+  margin-top: 1.5rem;
+}
+
+.collapsible-button {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #D9D5D2;
+  border-radius: 8px;
+  color: #D9D5D2;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.collapsible-button:hover {
+  border-color: #8C5D58;
+  color: #8C5D58;
+}
+
+.collapsible-arrow {
+  transition: transform 0.2s ease;
+}
+
+.collapsible-arrow.open {
+  transform: rotate(180deg);
+}
+
+.collapsible-content {
+  margin-top: 1rem;
+}

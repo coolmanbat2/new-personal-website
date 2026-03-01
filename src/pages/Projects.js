@@ -28,7 +28,7 @@ function Projects() {
         }
       } catch (err) {
         if (isMounted) {
-          setError("Unable load GitHub projects right now." + " " + "Error: " + err.message);
+          setError("Unable load GitHub projects right now. Error: " + err.message);
         }
       } finally {
         if (isMounted) {

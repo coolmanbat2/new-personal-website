@@ -6,7 +6,6 @@ export async function fetchUserRepos(username) {
   const headers = {
     Accept: "application/vnd.github+json",
     "X-GitHub-Api-Version": "2022-11-28",
-    Authorization: `Bearer ${process.env.REACT_APP_PERSONAL_ACCESS_TOKEN}`
   };
 
   // GET request for remote image in node.js

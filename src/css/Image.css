@@ -19,8 +19,14 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .main {
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
+  }
+
   .profile-background {
-    grid-column-start: auto;
+    grid-column: auto;
+    grid-row: auto;
     width: min(100%, 30rem);
   }
 }

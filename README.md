@@ -78,7 +78,7 @@ The production audit currently reports zero vulnerabilities. The legacy Create R
 
 ## Responsive layout
 
-The layout uses custom responsive CSS rather than a UI framework. Desktop uses a balanced two-column composition; below the responsive breakpoints, content stacks into a mobile layout. Skill pills, experience text, project cards, and images are constrained to their columns and wrap for narrow screens.
+The layout uses custom responsive CSS rather than a UI framework. Desktop uses a balanced two-column composition. On tablet and mobile widths, content stacks with the profile image between Core Skills and About so the image remains visible before the longer biography. Skill pills, experience text, project cards, and images are constrained to their columns and wrap for narrow screens.
 
 ## Project structure
 

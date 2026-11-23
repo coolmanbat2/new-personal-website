@@ -32,6 +32,7 @@
   text-align: left;
   padding-bottom: 1.2vw;
   gap: 1.56rem;
+  min-width: 0;
 }
 
 .weight {
@@ -48,6 +49,12 @@
 
 .info {
   font-size: 1rem;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.info-card > .main-color {
+  min-width: 0;
 }
 
 @media (max-width: 600px) {

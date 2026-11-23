@@ -76,6 +76,28 @@ The production dependency surface was reduced by:
 
 The production audit currently reports zero vulnerabilities. The legacy Create React App development toolchain still has separate development-only audit findings; replacing that toolchain would be a separate migration from the portfolio changes.
 
+## Publishing to GitHub Pages
+
+The source repository is `coolmanbat2/new-personal-website`. The live Pages repository is `coolmanbat2/coolmanbat2.github.io`, whose legacy Pages source is the `master` branch and whose custom domain is `thanusun.tech`.
+
+The `Deploy portfolio to GitHub Pages repository` workflow runs after the `Portfolio quality checks` workflow succeeds for an update to `main`, and can also be started manually with **Actions → Deploy portfolio to GitHub Pages repository → Run workflow**. It:
+
+1. Installs the source repository with `npm ci`.
+2. Builds the production bundle with `npm run build`.
+3. Adds the `thanusun.tech` CNAME file.
+4. Replaces the live repository's root contents with the generated `build/` output.
+5. Commits and pushes the result to `coolmanbat2.github.io:master`.
+
+### Required one-time setup
+
+Because GitHub's default `GITHUB_TOKEN` is scoped to the source repository, the workflow needs a repository secret named `PAGES_DEPLOY_TOKEN`. Use a fine-grained personal access token restricted to `coolmanbat2.github.io` with **Contents: Read and write** permission, then add it under:
+
+`new-personal-website → Settings → Secrets and variables → Actions → New repository secret`
+
+Do not put the token in the repository, `.env`, workflow YAML, or README. The deployment workflow intentionally fails with a clear message if the secret is missing.
+
+The source build and security checks run before the live repository is changed. The target repository remains a separate deployment repository, and the workflow preserves the existing custom-domain configuration by regenerating `CNAME` on every deployment.
+
 ## Responsive layout
 
 The layout uses custom responsive CSS rather than a UI framework. Desktop uses a balanced two-column composition. On tablet and mobile widths, content stacks with the profile image between Core Skills and About so the image remains visible before the longer biography. Skill pills, experience text, project cards, and images are constrained to their columns and wrap for narrow screens.

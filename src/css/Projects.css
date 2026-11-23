@@ -15,8 +15,8 @@
   border: 2px solid #fff;
   border-radius: 8px;
   padding: 1rem;
-  max-height: 50vh;
-  overflow-y: auto;
+  max-height: none;
+  overflow: visible;
 }
 
 .featured-projects-box {

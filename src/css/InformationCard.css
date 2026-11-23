@@ -18,6 +18,8 @@
 
 .top-skills {
   gap: 0.5rem;
+  flex-wrap: wrap;
+  min-width: 0;
 }
 
 .img-exp {

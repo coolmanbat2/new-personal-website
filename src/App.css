@@ -11,6 +11,10 @@ body {
   row-gap: 5vw;
 }
 
+.App > * {
+  min-width: 0;
+}
+
 .header {
   font-style: normal;
   font-weight: 500;

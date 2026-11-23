@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React portfolio website for Thanusun Thayaparan. The site presents professional experience, selected GitHub projects, technical skills, and a short personal introduction in a responsive dark-themed layout.
 
-## Available Scripts
+## Requirements
 
-In the project directory, you can run:
+- Node.js 20+
+- npm
 
-### `npm start`
+## Local development
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Install dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm ci
+```
+
+Start the development server:
+
+```bash
+npm start
+```
+
+The site opens at [http://localhost:3000](http://localhost:3000). To make it reachable from another device on the same network:
+
+```bash
+npm start -- --host 0.0.0.0
+```
+
+The development server supports hot reload.
+
+## Configuration
+
+The Projects section reads public GitHub repository data using these React build-time variables:
+
+```text
+REACT_APP_GITHUB_USERNAME=coolmanbat2
+REACT_APP_GITHUB_API_BASE=https://api.github.com
+```
+
+`REACT_APP_*` values are compiled into the browser bundle. Never put passwords, private tokens, or other secrets in them.
+
+## Available scripts
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the React test runner. In CI, the non-interactive command is:
+
+```bash
+CI=true npm test -- --watchAll=false --passWithNoTests
+```
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Creates the optimized production bundle in `build/`.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Create React App's irreversible eject operation. This project does not normally require it.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Quality and security checks
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+GitHub Actions runs the following checks for pushes and pull requests:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Build, test, and serve smoke test:** installs dependencies, runs tests, builds the production bundle, serves `build/`, and verifies an HTTP response.
+- **Production dependency audit:** runs `npm audit --omit=dev --audit-level=high`.
+- **CodeQL:** performs JavaScript security analysis.
+- **Dependency review:** checks dependency changes introduced by pull requests.
 
-## Learn More
+The production dependency surface was reduced by:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Removing unused runtime packages.
+- Moving build and test tooling into `devDependencies`.
+- Replacing runtime Axios usage with the browser's native Fetch API.
+- Regenerating `package-lock.json`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The production audit currently reports zero vulnerabilities. The legacy Create React App development toolchain still has separate development-only audit findings; replacing that toolchain would be a separate migration from the portfolio changes.
 
-### Code Splitting
+## Responsive layout
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The layout uses custom responsive CSS rather than a UI framework. Desktop uses a balanced two-column composition. On tablet and mobile widths, content stacks with the profile image between Core Skills and About so the image remains visible before the longer biography. Skill pills, experience text, project cards, and images are constrained to their columns and wrap for narrow screens.
 
-### Analyzing the Bundle Size
+## Project structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```text
+public/                 Static public assets
+src/components/         Reusable UI components
+src/css/                Component and responsive styles
+src/pages/               Main page sections
+src/services/            GitHub project data service
+src/static/              Images and logos
+.github/workflows/       Build and security checks
+```
 
-### Making a Progressive Web App
+## Learn more
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Create React App documentation](https://facebook.github.io/create-react-app/)
+- [React documentation](https://react.dev/)

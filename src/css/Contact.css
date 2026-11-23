@@ -11,3 +11,13 @@
 .icon {
     font-size: 2rem;
 }
+
+@media (max-width: 600px) {
+    .icons {
+        gap: 2.5rem;
+    }
+
+    .icon {
+        font-size: 1.75rem;
+    }
+}

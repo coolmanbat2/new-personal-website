@@ -23,14 +23,6 @@ function Contact() {
         >
           <i className="bi bi-github icon main-color" />
         </a>
-        <a
-          href="https://www.instagram.com/ryekg/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram profile"
-        >
-          <i className="bi bi-instagram icon main-color" />
-        </a>
       </div>
     </div>
   );

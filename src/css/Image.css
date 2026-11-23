@@ -6,13 +6,34 @@
 
 .profile-background {
   background-color: #dad7d2;
-  width: 100%;
+  width: min(100%, 27rem);
+  aspect-ratio: 4 / 5;
+  justify-self: center;
+  overflow: hidden;
   border-radius: 15px;
   grid-column-start: 2;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
+  .App {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .main {
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
+  }
+
   .profile-background {
-    grid-column-start: 1;
+    grid-column: auto;
+    grid-row: auto;
+    width: min(100%, 30rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-background {
+    width: 100%;
+    border-radius: 10px;
   }
 }

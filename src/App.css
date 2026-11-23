@@ -4,10 +4,15 @@ body {
 
 .App {
   display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   font-family: "Montserrat", sans-serif;
   padding: 5% 13%;
   column-gap: 8vw;
   row-gap: 5vw;
+}
+
+.App > * {
+  min-width: 0;
 }
 
 .header {
@@ -15,4 +20,17 @@ body {
   font-weight: 500;
   font-size: 1.5rem;
   display: flex;
+}
+
+@media (max-width: 600px) {
+  .App {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 2rem 1rem;
+    column-gap: 0;
+    row-gap: 2.5rem;
+  }
+
+  .header {
+    font-size: 1.25rem;
+  }
 }

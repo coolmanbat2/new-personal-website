@@ -1,0 +1,82 @@
+name: Deploy portfolio to GitHub Pages repository
+
+on:
+  workflow_run:
+    workflows: [Portfolio quality checks]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-live-portfolio
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    name: Build and publish to coolmanbat2.github.io
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out portfolio source
+        uses: actions/checkout@v4
+        with:
+          path: source
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: source/package-lock.json
+
+      - name: Install dependencies
+        working-directory: source
+        run: npm ci
+
+      - name: Build production site
+        working-directory: source
+        run: npm run build
+
+      - name: Add custom domain file
+        run: printf 'thanusun.tech\n' > source/build/CNAME
+
+      - name: Check deployment credential
+        env:
+          PAGES_DEPLOY_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+        run: |
+          if [ -z "$PAGES_DEPLOY_TOKEN" ]; then
+            echo 'PAGES_DEPLOY_TOKEN is not configured.'
+            echo 'Add a fine-grained token with Contents: Read and write access to coolmanbat2.github.io.'
+            exit 1
+          fi
+
+      - name: Check out live Pages repository
+        uses: actions/checkout@v4
+        with:
+          repository: coolmanbat2/coolmanbat2.github.io
+          ref: master
+          token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+          path: live
+
+      - name: Replace live site with production build
+        run: rsync -a --delete --exclude='.git/' source/build/ live/
+
+      - name: Commit and push live site
+        working-directory: live
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all
+          if git diff --cached --quiet; then
+            echo 'Live site already matches the generated build.'
+            exit 0
+          fi
+          git commit -m "deploy: publish portfolio ${SOURCE_SHA::7}"
+          git push origin HEAD:master

@@ -4,6 +4,7 @@ body {
 
 .App {
   display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   font-family: "Montserrat", sans-serif;
   padding: 5% 13%;
   column-gap: 8vw;
@@ -19,6 +20,7 @@ body {
 
 @media (max-width: 600px) {
   .App {
+    grid-template-columns: minmax(0, 1fr);
     padding: 2rem 1rem;
     column-gap: 0;
     row-gap: 2.5rem;

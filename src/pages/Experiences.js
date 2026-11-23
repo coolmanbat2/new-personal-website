@@ -1,70 +1,24 @@
 import "../css/Experiences.css";
 import "../css/Main.css";
-import hackthevalley from "../static/htv.jpg";
 
 import InformationCard from "../components/InformationCard.js";
-
 import Skill from "../components/Skill.js";
 import Contact from "../components/Contact.js";
-
 import React from "react";
 import tdLogo from "../static/td-logo.png";
-import tjxLogo from "../static/tjx-canada-logo.png";
 
 function Experiences() {
   function softwareEngineerSkills() {
     return (
       <>
-        <Skill>Java</Skill>
-        <Skill>PostgreSQL</Skill>
-        <Skill>REST APIs</Skill>
-        <Skill>Git</Skill>
+        <Skill>Java (Spring Boot)</Skill>
+        <Skill>Python</Skill>
+        <Skill>Docker</Skill>
+        <Skill>Linux</Skill>
+        <Skill>Dynatrace</Skill>
+        <Skill>Splunk</Skill>
         <Skill>Jira</Skill>
-      </>
-    );
-  }
-
-  function bankingAssociateSkills() {
-    return (
-      <>
-        <Skill>Agile</Skill>
-        <Skill>Salesforce</Skill>
-        <Skill>Product Demos</Skill>
-        <Skill>Presentation</Skill>
-      </>
-    );
-  }
-
-  function customerExperienceSkills() {
-    return (
-      <>
-        <Skill>Customer Service</Skill>
-        <Skill>Sales</Skill>
-        <Skill>Microsoft Office</Skill>
-      </>
-    );
-  }
-
-  function salesAssociateSkills() {
-    return (
-      <>
-        <Skill>Customer Service</Skill>
-        <Skill>Sales</Skill>
-        <Skill>Merchandising</Skill>
-      </>
-    );
-  }
-
-  function hackTheValleySkills() {
-    return (
-      <>
-        <Skill>React</Skill>
-        <Skill>JavaScript</Skill>
-        <Skill>HTML</Skill>
-        <Skill>CSS</Skill>
-        <Skill>Sass</Skill>
-        <Skill>Bootstrap</Skill>
-        <Skill>Redis</Skill>
+        <Skill>Confluence</Skill>
       </>
     );
   }
@@ -74,83 +28,43 @@ function Experiences() {
       <div className="main-color header">Experience</div>
       <div className="experiences">
         <InformationCard
-          title="Software Engineer - TD"
-          dates="Jan 2025 - Present"
+          title="Software Engineer - TD Bank"
+          dates="January 2025 - Present"
           src={tdLogo}
           skills={softwareEngineerSkills()}
         >
           <div>
-            Collaborated with cross-functional teams to design and implement
-            software solutions, improving project delivery timelines by 10%.
+            Developed production fixes for recurring defects in an internal
+            credit-application tool used by sales employees, supporting reliable
+            day-to-day workflows.
           </div>
           <div>
-            Resolved software defects using Java and PostgreSQL, enhancing user
-            accessibility through effective remediation strategies.
-          </div>
-        </InformationCard>
-        <InformationCard
-          title="Personal Banking Associate - TD"
-          dates="Jan 2024 - Dec 2024"
-          src={tdLogo}
-          skills={bankingAssociateSkills()}
-        >
-          <div>
-            Implemented Agile project management practices to improve
-            collaboration and delivery efficiency by 20%.
+            Configured AI-assisted knowledge workflows using Confluence content
+            to support incident handling and make relevant operational
+            information easier to retrieve.
           </div>
           <div>
-            Managed 200+ leads in Salesforce CRM, optimizing organization and
-            client follow-ups.
-          </div>
-        </InformationCard>
-        <InformationCard
-          title="Customer Experience Associate - TD"
-          dates="Nov 2022 - Dec 2023"
-          src={tdLogo}
-          skills={customerExperienceSkills()}
-        >
-          <div>
-            Achieved an average LEI score of 80% by providing clear and
-            effective customer support.
+            Investigated production incidents during on-call for systems used by
+            more than 50,000 employees, tracing issues and supporting incident
+            response and escalation.
           </div>
           <div>
-            Increased daily banking sales by 261% through tailored product
-            recommendations.
-          </div>
-        </InformationCard>
-        <InformationCard
-          title="Sales Associate - Winners (TJX Canada)"
-          dates="Aug 2017 - Oct 2022"
-          src={tjxLogo}
-          skills={salesAssociateSkills()}
-        >
-          <div>
-            Processed 20+ customer transactions per shift while maintaining a
-            95% accuracy rate.
+            Reviewed more than 10 changes per month for compliance with
+            change-management procedures and audit requirements.
           </div>
           <div>
-            Assisted 70+ customers daily and exceeded sales goals by 20% through
-            product guidance.
-          </div>
-        </InformationCard>
-        <InformationCard
-          title="Frontend Developer - Hack the Valley"
-          dates="September 2020 - February 2021"
-          src={hackthevalley}
-          skills={hackTheValleySkills()}
-        >
-          <div>
-            Reduced query times by 50% by refactoring the database with Redis
-            and optimizing query structure.
+            Received VP-level recognition for ideas adopted by TD&apos;s
+            enterprise-wide cybersecurity volunteer program, which helps
+            employees from other departments transition into cybersecurity.
           </div>
           <div>
-            Engineered React Components for the Front-end Team by analyzing the
-            product requirements and researching the best solutions in order to
-            decrease development time.
+            Participated in off-site training programs and mentorship
+            opportunities to develop software-engineering skills and broaden
+            technical practice.
           </div>
         </InformationCard>
       </div>
-      <Contact/>
+      <Contact />
     </div>
   );
 }

@@ -72,4 +72,20 @@ a:hover {
   gap: 0.5rem;
 }
 
+@media (max-width: 600px) {
+  .big-main-text {
+    font-size: 1.45rem;
+    line-height: 1.35;
+  }
+
+  .med-main-text {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  .core-skills-list {
+    gap: 0.4rem;
+  }
+}
+
 

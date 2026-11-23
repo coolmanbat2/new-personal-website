@@ -16,3 +16,9 @@
     grid-column-start: 1;
   }
 }
+
+@media (max-width: 600px) {
+  .profile-background {
+    border-radius: 10px;
+  }
+}

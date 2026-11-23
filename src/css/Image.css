@@ -28,6 +28,7 @@
     grid-column: auto;
     grid-row: auto;
     width: min(100%, 30rem);
+    margin-top: 1.5rem;
   }
 }
 

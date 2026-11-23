@@ -1,6 +1,7 @@
 import "../css/Main.css";
 import React from "react";
 import Skill from "../components/Skill";
+import About from "../components/About";
 
 function Main() {
   return (
@@ -23,6 +24,7 @@ function Main() {
             <Skill>Git</Skill>
           </div>
         </div>
+        <About />
       </div>
     </div>
   );

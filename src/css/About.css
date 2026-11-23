@@ -1,0 +1,28 @@
+.about-section {
+  margin-top: 1.5rem;
+  max-width: 38rem;
+}
+
+.about-copy {
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.about-copy p {
+  margin: 0 0 1rem;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    margin-top: 1.25rem;
+  }
+
+  .about-copy {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}

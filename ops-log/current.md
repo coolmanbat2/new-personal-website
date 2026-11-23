@@ -12,5 +12,3 @@ This log records repository-affecting agent actions. It excludes credentials, to
 - Inspected the Create React App structure and GitHub Pages prerequisites.
 - Ran `npm ci` and `npm run build`; production build completed successfully.
 - Added the GitHub Pages deployment workflow and 30-day operations-log rotation workflow.
-- Pushed commit `7d704a9` to `main`.
-- Verified the first Pages workflow run failed because GitHub Pages is not yet enabled for this repository; manual Pages source selection is required.

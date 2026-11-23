@@ -9,9 +9,10 @@
 }
 
 .image {
-  width: 3.5rem;
-  height: 3.31rem;
-  object-fit: cover;
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  align-self: flex-start;
   border-radius: 0.3125rem;
 }
 

@@ -19,6 +19,7 @@ function Experiences() {
         <Skill>Splunk</Skill>
         <Skill>Jira</Skill>
         <Skill>Confluence</Skill>
+        <Skill>MySQL</Skill>
       </>
     );
   }
@@ -34,33 +35,30 @@ function Experiences() {
           skills={softwareEngineerSkills()}
         >
           <div>
-            Developed production fixes for recurring defects in an internal
-            credit-application tool used by sales employees, supporting reliable
-            day-to-day workflows.
+            Engineered and deployed production fixes for recurring defects in
+            an enterprise credit-application platform (Java/Spring Boot,
+            MySQL), improving daily workflow stability for internal sales
+            teams.
           </div>
           <div>
-            Configured AI-assisted knowledge workflows using Confluence content
-            to support incident handling and make relevant operational
-            information easier to retrieve.
+            Built an AI-assisted knowledge retrieval workflow indexing
+            Confluence runbooks, accelerating root-cause lookup and operational
+            triage during on-call rotations.
           </div>
           <div>
-            Investigated production incidents during on-call for systems used by
-            more than 50,000 employees, tracing issues and supporting incident
-            response and escalation.
+            Led production incident investigation and tracing using Splunk and
+            Dynatrace across enterprise systems serving 50,000+ employees,
+            coordinating root-cause analysis and escalation.
           </div>
           <div>
-            Reviewed more than 10 changes per month for compliance with
-            change-management procedures and audit requirements.
+            Governed production release readiness across 10+ monthly
+            deployments, validating change-management compliance, rollback
+            procedures, and operational risk controls.
           </div>
           <div>
-            Received VP-level recognition for ideas adopted by TD&apos;s
-            enterprise-wide cybersecurity volunteer program, which helps
-            employees from other departments transition into cybersecurity.
-          </div>
-          <div>
-            Participated in off-site training programs and mentorship
-            opportunities to develop software-engineering skills and broaden
-            technical practice.
+            Earned VP-level recognition for designing initiatives adopted by
+            TD&apos;s enterprise-wide cybersecurity volunteer program, creating
+            technical transition pathways for internal employees.
           </div>
         </InformationCard>
       </div>

@@ -61,6 +61,52 @@ function Experiences() {
             technical transition pathways for internal employees.
           </div>
         </InformationCard>
+        <InformationCard
+          title="Personal Banking Associate - TD Bank"
+          dates="January 2024 - December 2024"
+          src={tdLogo}
+          skills={
+            <>
+              <Skill>Salesforce</Skill>
+              <Skill>Financial Services</Skill>
+              <Skill>Client Service</Skill>
+            </>
+          }
+        >
+          <div>
+            Supported frontline personal-banking and credit-product workflows,
+            using financial-software applications to facilitate transactions
+            and client follow-up.
+          </div>
+          <div>
+            Managed 200+ Salesforce leads and applied operational procedures to
+            support organized branch sales workflows and compliant client
+            service.
+          </div>
+        </InformationCard>
+        <InformationCard
+          title="Customer Experience Associate - TD Bank"
+          dates="November 2022 - December 2023"
+          src={tdLogo}
+          skills={
+            <>
+              <Skill>Client Service</Skill>
+              <Skill>Financial Products</Skill>
+              <Skill>TD Internal Tools</Skill>
+            </>
+          }
+        >
+          <div>
+            Supported frontline banking clients by explaining financial and
+            investment products, processing transactions with 97% accuracy, and
+            completing routine service requests using TD internal tools.
+          </div>
+          <div>
+            Resolved escalated customer issues involving cheque negotiation,
+            interest calculations, and account usage while maintaining an
+            average LEI score of 80%.
+          </div>
+        </InformationCard>
       </div>
       <Contact />
     </div>

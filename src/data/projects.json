@@ -3,10 +3,11 @@
     {
       "id": "local-llm-inference-lab",
       "title": "Local LLM Inference & Performance Evaluation Lab",
-      "description": "Benchmarked local LLM pipelines, including Qwen 27B-class models, across GPU and memory-constrained CPU paths.",
+      "description": "",
       "highlights": [
-        "Engineered CPU execution using AVX2 instruction passthrough, explicit OpenMP thread binding, and custom runtime flags.",
-        "Profiled throughput, concurrency, and latency/privacy/cost routing criteria."
+        "Configured and benchmarked local inference pipelines for large language models (including Qwen3.8-27B) across GPU and constrained CPU execution paths.",
+        "Engineered a resource-constrained CPU inference configuration using AVX2 instruction passthrough, explicit OpenMP thread binding, and custom runtime settings to optimize execution under strict memory limits.",
+        "Profiled throughput, concurrency, and resource utilization across local and hosted inference providers to define latency-, privacy-, and cost-based workload routing criteria."
       ],
       "tags": [
         "LLM Inference",
@@ -18,10 +19,11 @@
     {
       "id": "ai-automation-platform",
       "title": "Personal AI Automation & Orchestration Platform",
-      "description": "Modular agentic platform combining LLM tool execution, browser automation, scheduled pipelines, and semantic memory.",
+      "description": "",
       "highlights": [
-        "Routes workloads across local Ollama models and hosted OpenRouter APIs.",
-        "Supports technical research, scheduled automation, and operational workflows."
+        "Architected a modular automation platform combining LLM tool execution, browser automation, scheduled job pipelines, and semantic memory.",
+        "Automated recurring workflows for technical research, software-engineering market tracking, and media/trend analysis.",
+        "Integrated local Ollama models with hosted OpenRouter APIs to dynamically balance latency, reliability, privacy, and inference cost across heterogeneous workloads."
       ],
       "tags": [
         "Agentic AI",
@@ -33,10 +35,10 @@
     {
       "id": "linux-reliability-homelab",
       "title": "Self-Hosted Linux Infrastructure & Reliability Homelab",
-      "description": "Containerized Linux services with Docker, service health monitoring, failure recovery, scheduled patching, and automated backup architecture.",
+      "description": "",
       "highlights": [
-        "Operates production-style services with health checks and recovery procedures.",
-        "Maintains an automated 3-2-1 backup architecture and scheduled maintenance."
+        "Built and maintained a self-hosted Linux environment for containerized application deployment, service monitoring, and failure recovery.",
+        "Implemented an automated 3-2-1 backup strategy alongside scheduled patching and restart procedures to enforce high availability."
       ],
       "tags": [
         "Docker",

@@ -34,32 +34,34 @@ function Experiences() {
           src={tdLogo}
           skills={softwareEngineerSkills()}
         >
-          <div>
-            Engineered and deployed production fixes for recurring defects in
-            an enterprise credit-application platform (Java/Spring Boot,
-            MySQL), improving daily workflow stability for internal sales
-            teams.
-          </div>
-          <div>
-            Built an AI-assisted knowledge retrieval workflow indexing
-            Confluence runbooks, accelerating root-cause lookup and operational
-            triage during on-call rotations.
-          </div>
-          <div>
-            Led production incident investigation and tracing using Splunk and
-            Dynatrace across enterprise systems serving 50,000+ employees,
-            coordinating root-cause analysis and escalation.
-          </div>
-          <div>
-            Governed production release readiness across 10+ monthly
-            deployments, validating change-management compliance, rollback
-            procedures, and operational risk controls.
-          </div>
-          <div>
-            Earned VP-level recognition for designing initiatives adopted by
-            TD&apos;s enterprise-wide cybersecurity volunteer program, creating
-            technical transition pathways for internal employees.
-          </div>
+          <ul className="experience-bullets">
+            <li>
+              Engineered and deployed production fixes for recurring defects in
+              an enterprise credit-application platform (Java/Spring Boot,
+              MySQL), improving daily workflow stability for internal sales
+              teams.
+            </li>
+            <li>
+              Built an AI-assisted knowledge retrieval workflow indexing
+              Confluence runbooks, accelerating root-cause lookup and operational
+              triage during on-call rotations.
+            </li>
+            <li>
+              Led production incident investigation and tracing using Splunk and
+              Dynatrace across enterprise systems serving 50,000+ employees,
+              coordinating root-cause analysis and escalation.
+            </li>
+            <li>
+              Governed production release readiness across 10+ monthly
+              deployments, validating change-management compliance, rollback
+              procedures, and operational risk controls.
+            </li>
+            <li>
+              Earned VP-level recognition for designing initiatives adopted by
+              TD&apos;s enterprise-wide cybersecurity volunteer program, creating
+              technical transition pathways for internal employees.
+            </li>
+          </ul>
         </InformationCard>
         <InformationCard
           title="Personal Banking Associate - TD Bank"
@@ -73,16 +75,18 @@ function Experiences() {
             </>
           }
         >
-          <div>
-            Supported frontline personal-banking and credit-product workflows,
-            using financial-software applications to facilitate transactions
-            and client follow-up.
-          </div>
-          <div>
-            Managed 200+ Salesforce leads and applied operational procedures to
-            support organized branch sales workflows and compliant client
-            service.
-          </div>
+          <ul className="experience-bullets">
+            <li>
+              Supported frontline personal-banking and credit-product workflows,
+              using financial-software applications to facilitate transactions
+              and client follow-up.
+            </li>
+            <li>
+              Managed 200+ Salesforce leads and applied operational procedures to
+              support organized branch sales workflows and compliant client
+              service.
+            </li>
+          </ul>
         </InformationCard>
         <InformationCard
           title="Customer Experience Associate - TD Bank"
@@ -92,20 +96,21 @@ function Experiences() {
             <>
               <Skill>Client Service</Skill>
               <Skill>Financial Products</Skill>
-              <Skill>TD Internal Tools</Skill>
             </>
           }
         >
-          <div>
-            Supported frontline banking clients by explaining financial and
-            investment products, processing transactions with 97% accuracy, and
-            completing routine service requests using TD internal tools.
-          </div>
-          <div>
-            Resolved escalated customer issues involving cheque negotiation,
-            interest calculations, and account usage while maintaining an
-            average LEI score of 80%.
-          </div>
+          <ul className="experience-bullets">
+            <li>
+              Supported frontline banking clients by explaining financial and
+              investment products, processing transactions with 97% accuracy, and
+              completing routine service requests using TD internal tools.
+            </li>
+            <li>
+              Resolved escalated customer issues involving cheque negotiation,
+              interest calculations, and account usage while maintaining an
+              average LEI score of 80%.
+            </li>
+          </ul>
         </InformationCard>
       </div>
       <Contact />

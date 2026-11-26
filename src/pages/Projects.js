@@ -1,76 +1,45 @@
 import "../css/Projects.css";
 import "../css/Main.css";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Project from "../components/Project";
-import {
-  getFeaturedRepo,
-  getFilteredRepos,
-  loadRepos as loadReposService,
-} from "../services/projectsService";
+import projectData from "../data/projects.json";
+import { getFilteredRepos } from "../services/projectsService";
 
-const GITHUB_USERNAME = process.env.REACT_APP_GITHUB_USERNAME;
 const viewText = "View on GitHub";
 
 function Projects() {
-  const [repos, setRepos] = useState([]);
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    async function loadProjects() {
-      try {
-        const data = await loadReposService(GITHUB_USERNAME);
-        if (isMounted) {
-          setRepos(data);
-        }
-      } catch (err) {
-        if (isMounted) {
-          setError("Unable load GitHub projects right now. Error: " + err.message);
-        }
-      } finally {
-        if (isMounted) {
-          setLoading(false);
-        }
-      }
-    }
-
-    loadProjects();
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
-  const filteredRepos = getFilteredRepos(repos);
-  const featuredRepo = getFeaturedRepo(filteredRepos);
-  const featuredIds = new Set(featuredRepo ? [featuredRepo.id] : []);
-  const remainingRepos = filteredRepos.filter((repo) => !featuredIds.has(repo.id));
+  const featuredProjects = projectData.featured || [];
+  const additionalRepos = getFilteredRepos(projectData.repos || []);
+  const featuredKeys = new Set(
+    featuredProjects.flatMap((project) =>
+      [project.githubUrl, project.html_url, project.name]
+        .filter(Boolean)
+        .map((value) => value.toLowerCase())
+    )
+  );
+  const remainingRepos = additionalRepos.filter((repo) => {
+    const key = (repo.html_url || repo.name || "").toLowerCase();
+    return !featuredKeys.has(key);
+  });
 
   return (
     <div id="projects">
       <div className="main-color header">Projects</div>
-      {loading && (
-        <div className="tertiary-color">Loading GitHub projects...</div>
-      )}
-      {!loading && error && <div className="tertiary-color">{error}</div>}
-      {!loading && !error && featuredRepo && (
-        <div className="featured-projects-box font-design">
-          <div className="project-year main-color">
-            This week's featured project
-          </div>
-          <div className="projects">
-            <Project repo={featuredRepo} viewText={viewText} />
-          </div>
+      <div className="featured-projects-box font-design">
+        <div className="project-year main-color">Featured systems</div>
+        <div className="projects">
+          {featuredProjects.map((project) => (
+            <Project key={project.id} project={project} viewText={viewText} />
+          ))}
         </div>
-      )}
-      {!loading && !error && (
+      </div>
+      {remainingRepos.length > 0 && (
         <div className="projects-box font-design">
+          <div className="project-year main-color">Additional public projects</div>
           <div className="projects">
             {remainingRepos.map((repo) => (
-              <Project key={repo.id} repo={repo} viewText={viewText} />
+              <Project key={repo.id || repo.name} project={repo} viewText={viewText} />
             ))}
           </div>
         </div>

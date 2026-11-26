@@ -1,0 +1,95 @@
+{
+  "featured": [
+    {
+      "id": "local-llm-inference-lab",
+      "title": "Local LLM Inference & Performance Evaluation Lab",
+      "description": "Benchmarked local LLM pipelines, including Qwen 27B-class models, across GPU and memory-constrained CPU paths.",
+      "highlights": [
+        "Engineered CPU execution using AVX2 instruction passthrough, explicit OpenMP thread binding, and custom runtime flags.",
+        "Profiled throughput, concurrency, and latency/privacy/cost routing criteria."
+      ],
+      "tags": [
+        "LLM Inference",
+        "AVX2",
+        "OpenMP",
+        "Performance"
+      ]
+    },
+    {
+      "id": "ai-automation-platform",
+      "title": "Personal AI Automation & Orchestration Platform",
+      "description": "Modular agentic platform combining LLM tool execution, browser automation, scheduled pipelines, and semantic memory.",
+      "highlights": [
+        "Routes workloads across local Ollama models and hosted OpenRouter APIs.",
+        "Supports technical research, scheduled automation, and operational workflows."
+      ],
+      "tags": [
+        "Agentic AI",
+        "Ollama",
+        "OpenRouter",
+        "Semantic Memory"
+      ]
+    },
+    {
+      "id": "linux-reliability-homelab",
+      "title": "Self-Hosted Linux Infrastructure & Reliability Homelab",
+      "description": "Containerized Linux services with Docker, service health monitoring, failure recovery, scheduled patching, and automated backup architecture.",
+      "highlights": [
+        "Operates production-style services with health checks and recovery procedures.",
+        "Maintains an automated 3-2-1 backup architecture and scheduled maintenance."
+      ],
+      "tags": [
+        "Docker",
+        "Linux",
+        "Reliability",
+        "Backup & Recovery"
+      ]
+    }
+  ],
+  "repos": [
+    {
+      "id": 176767052,
+      "name": "special-KeY-TyPiNg",
+      "html_url": "https://github.com/coolmanbat2/special-KeY-TyPiNg",
+      "description": "A fun program where users can allow their computers to type in \"tHiS FoRm\".",
+      "language": "C#",
+      "stargazers_count": 1,
+      "fork": false,
+      "archived": false,
+      "updated_at": "2020-03-16T15:37:27Z"
+    },
+    {
+      "id": 762758572,
+      "name": "url-shortener",
+      "html_url": "https://github.com/coolmanbat2/url-shortener",
+      "description": "An app that allows users to provide a link to be returned a shortened link.",
+      "language": "Java",
+      "stargazers_count": 0,
+      "fork": false,
+      "archived": false,
+      "updated_at": "2024-03-02T19:11:36Z"
+    },
+    {
+      "id": 751160312,
+      "name": "Video-Game-Discovery-API",
+      "html_url": "https://github.com/coolmanbat2/Video-Game-Discovery-API",
+      "description": "A Video Game Discovery API that allows users to retrieve, add, update, and delete video games. ",
+      "language": "Java",
+      "stargazers_count": 0,
+      "fork": false,
+      "archived": false,
+      "updated_at": "2024-02-01T03:33:25Z"
+    },
+    {
+      "id": 511353889,
+      "name": "Group-Music",
+      "html_url": "https://github.com/coolmanbat2/Group-Music",
+      "description": "A music control web app that allows users in a room to change the current song playing. ",
+      "language": "Python",
+      "stargazers_count": 0,
+      "fork": false,
+      "archived": false,
+      "updated_at": "2022-07-07T02:18:24Z"
+    }
+  ]
+}

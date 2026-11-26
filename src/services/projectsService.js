@@ -1,32 +1,35 @@
-import { fetchUserRepos } from "./githubClient";
+const EXCLUDED_REPOSITORIES = new Set([
+  "coolmanbat2.github.io",
+  "new-personal-website",
+  "meme-generator",
+  "meme-generator-react-edition",
+  "special-keytyping",
+  "netcon",
+]);
 
-// Service for project-related data.
-
-export async function loadRepos(username) {
-  return fetchUserRepos(username);
-}
-
-// This filters out forked and archived repositories and sorts them by stars.
+// The browser reads the committed snapshot. This helper keeps display filtering
+// deterministic and prevents empty, forked, archived, or portfolio repos from
+// crowding out the curated systems above.
 export function getFilteredRepos(repos) {
   if (!Array.isArray(repos)) {
     return [];
   }
 
   return repos
-    .filter((repo) => !repo.fork && !repo.archived)
-    .sort((a, b) => (b.stargazers_count || 0) - (a.stargazers_count || 0));
-}
-
-export function getWeekIndex(date) {
-  const startOfYear = new Date(date.getFullYear(), 0, 1);
-  const diffDays = Math.floor((date - startOfYear) / 86400000);
-  return Math.floor(diffDays / 7);
-}
-
-export function getFeaturedRepo(repos, date = new Date()) {
-  if (!repos.length) {
-    return null;
-  }
-
-  return repos[getWeekIndex(date) % repos.length];
+    .filter((repo) => {
+      const name = String(repo.name || "").toLowerCase();
+      return (
+        !repo.fork &&
+        !repo.archived &&
+        Boolean(repo.description && repo.description.trim()) &&
+        !EXCLUDED_REPOSITORIES.has(name)
+      );
+    })
+    .sort((a, b) => {
+      const stars = (b.stargazers_count || 0) - (a.stargazers_count || 0);
+      if (stars !== 0) {
+        return stars;
+      }
+      return String(b.updated_at || "").localeCompare(String(a.updated_at || ""));
+    });
 }

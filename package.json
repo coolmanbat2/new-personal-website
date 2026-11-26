@@ -8,6 +8,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.2",
     "@testing-library/user-event": "^14.5.2",
@@ -15,6 +16,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "refresh-projects": "node scripts/update-projects.js",
+    "prebuild": "node scripts/update-projects.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

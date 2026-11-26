@@ -31,14 +31,23 @@ The development server supports hot reload.
 
 ## Configuration
 
-The Projects section reads public GitHub repository data using these React build-time variables:
+The Projects section is rendered from the committed `src/data/projects.json` snapshot. The browser does not call GitHub, so visitors are not exposed to GitHub's unauthenticated per-IP rate limit.
 
-```text
-REACT_APP_GITHUB_USERNAME=coolmanbat2
-REACT_APP_GITHUB_API_BASE=https://api.github.com
+Refresh repository metadata locally before a build with:
+
+```bash
+npm run refresh-projects
 ```
 
-`REACT_APP_*` values are compiled into the browser bundle. Never put passwords, private tokens, or other secrets in them.
+The refresh uses the public GitHub API when available, filters forks, archived repositories, empty descriptions, obvious portfolio/trivial repositories, and then updates only the `repos` portion of the snapshot. If GitHub returns a 403/5xx or the network is unavailable, the existing committed snapshot is retained and the build continues with the curated featured systems and last-known repository metadata.
+
+`GITHUB_USERNAME` is optional and defaults to `coolmanbat2`:
+
+```bash
+GITHUB_USERNAME=coolmanbat2 npm run refresh-projects
+```
+
+No GitHub token is required for a refresh. Never put passwords, private tokens, or other secrets in this repository.
 
 ## Available scripts
 

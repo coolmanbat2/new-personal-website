@@ -24,11 +24,13 @@ function Project({ project, viewText }) {
         ) : null
       }
     >
-      <div>{description}</div>
+      {description ? <div>{description}</div> : null}
       {highlights.length > 0 && (
         <ul className="project-highlights">
           {highlights.map((highlight) => (
-            <li key={highlight}>{highlight}</li>
+            <li key={highlight}>
+              <span>{highlight}</span>
+            </li>
           ))}
         </ul>
       )}
